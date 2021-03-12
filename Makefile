@@ -35,7 +35,7 @@ default: make_export
 	mv $(OUTPUT) export/
 
 lib: $(shell uname)
-	mv $(shell find ./libs -name "*.*o") export/
+	cp $(shell find ./libs -name "*.*o") export/
 
 Darwin: make_export copy_headers
 	$(CC) $(OPT) $(VERSION) $(FLAGS) $(WARNINGS) $(REMOVE_WARNINGS) $(UNUSED_WARNINGS) $(OSX_LIBS) $(INPUTFILES)
