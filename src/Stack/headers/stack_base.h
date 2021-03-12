@@ -66,4 +66,11 @@ void *stack_pop(stack *st);
  **/
 void *stack_peek(stack *st);
 
+/**
+ * @func: stack_free
+ * @brief Frees the stack memory space
+ * @param st -> The stack to free
+ */
+void stack_free(stack *st);
+
 #endif

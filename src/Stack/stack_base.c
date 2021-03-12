@@ -49,3 +49,8 @@ void *stack_peek(stack *st) {
     if(!stack_is_empty(st)) return vector_get(st->items, st->top);
     return NULL;
 }
+
+void stack_free(stack *st) {
+    vector_free(st->items);
+    free(st);
+}

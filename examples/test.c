@@ -11,5 +11,8 @@ int main(void) {
     printf("item %ld, should be 3\n", (long)stack_pop(st));
     printf("peek item %ld should be 2\n", (long)stack_peek(st));
     printf("item %ld, should be 2\n", (long)stack_pop(st));
+
+    stack_free(st);
+
     return 0;
 }
