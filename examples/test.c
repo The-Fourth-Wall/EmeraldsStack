@@ -14,5 +14,13 @@ int main(void) {
 
     stack_free(st);
 
+    st = stack_new();
+    stack_push(st, (void*)88);
+    printf("-> %ld should be 88\n", (long)stack_pop(st));
+    stack_push(st, (void*)99);
+    printf("-> %ld should be 99\n", (long)stack_pop(st));
+
+    stack_free(st);
+
     return 0;
 }
