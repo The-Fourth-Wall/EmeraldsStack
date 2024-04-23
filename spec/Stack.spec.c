@@ -1,17 +1,17 @@
-#include "Stack.spec.h"
+#include "../libs/cSpec/export/cSpec.h"
 
 module(T_Stack, {
-    describe("#get_value", {
-        it("returns `Hello, World!`", {
-            assert_that_charptr("Hello, World!" equals to "Hello, World!");
-        });
+  describe("#get_value", {
+    it("returns `Hello, World!`", {
+      assert_that_charptr("Hello, World!" equals to "Hello, World!");
     });
+  });
 });
 
 spec_suite({
-    T_Stack();
+  T_Stack();
 });
 
-spec({
-    run_spec_suite("all");
-});
+int main(void) {
+  run_spec_suite("all");
+}

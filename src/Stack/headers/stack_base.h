@@ -14,9 +14,9 @@
  * @param items -> A vector of items
  **/
 typedef struct stack {
-    size_t length;
-    size_t top;
-    vector *items;
+  size_t length;
+  size_t top;
+  vector *items;
 } stack;
 
 /**

@@ -17,14 +17,14 @@ A stack data structure implemented using a dynamic array.
 #include <stdio.h>
 
 int main(void) {
-    stack *st = stack_new();
-    stack_push(st, 2);
-    stack_push(st, 3);
-    stack_push(st, -1);
-    printf("item %d, should be -1\n", stack_pop(st));
-    printf("item %d, should be 3\n", stack_pop(st));
-    printf("peek item %d should be 2\n", stack_peek(st));
-    printf("item %d, should be 2\n", stack_pop(st));
+  stack *st = stack_new();
+  stack_push(st, 2);
+  stack_push(st, 3);
+  stack_push(st, -1);
+  printf("item %d, should be -1\n", stack_pop(st));
+  printf("item %d, should be 3\n", stack_pop(st));
+  printf("peek item %d should be 2\n", stack_peek(st));
+  printf("item %d, should be 2\n", stack_pop(st));
 }
 ```
 
@@ -32,7 +32,7 @@ int main(void) {
 
 ## Development
 
-* Write tests
+- Write tests
 
 ## Contributing
 
