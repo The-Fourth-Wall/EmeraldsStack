@@ -3,28 +3,28 @@
 
 #include <stdlib.h> /* malloc, calloc, realloc, free */
 
-/* Stack gets implemented using a vector */
-#include "../../libs/Vector/export/Vector.h"
+/* EmeraldsStack gets implemented using an EmeraldsVector */
+#include "../../libs/EmeraldsVector/export/EmeraldsVector.h"
 
 /**
- * @struct: stack
+ * @struct: EmeraldsStack
  * @desc: A stack data structure implementation
  * @param length -> The number of items pushed in the stack
  * @param top -> The index of the item on the top of the stack
  * @param items -> A vector of items
  **/
-typedef struct stack {
+typedef struct EmeraldsStack {
   size_t length;
   size_t top;
-  vector *items;
-} stack;
+  EmeraldsVector *items;
+} EmeraldsStack;
 
 /**
  * @func: stack_new
  * @desc: Creates a basic stack data structure using a dynamic array
  * @return The newly created stack
  **/
-stack *stack_new(void);
+EmeraldsStack *stack_new(void);
 
 /**
  * @func: stack_length
@@ -32,7 +32,7 @@ stack *stack_new(void);
  * @param st -> The stack to use
  * @return The length (st->length)
  **/
-size_t stack_length(stack *st);
+size_t stack_length(EmeraldsStack *st);
 
 /**
  * @func: stack_is_empty
@@ -40,7 +40,7 @@ size_t stack_length(stack *st);
  * @param st -> The stack to use
  * @return A boolean
  **/
-bool stack_is_empty(stack *st);
+bool stack_is_empty(EmeraldsStack *st);
 
 /**
  * @func: stack_push
@@ -48,7 +48,7 @@ bool stack_is_empty(stack *st);
  * @param st -> The stack to use
  * @param item -> The item to push to the stack
  **/
-void stack_push(stack *st, void *item);
+void stack_push(EmeraldsStack *st, void *item);
 
 /**
  * @func: stack_pop
@@ -56,7 +56,7 @@ void stack_push(stack *st, void *item);
  * @param st -> The stack to use
  * @return The item on the top of the stack
  **/
-void *stack_pop(stack *st);
+void *stack_pop(EmeraldsStack *st);
 
 /**
  * @func: stack_peek
@@ -64,13 +64,13 @@ void *stack_pop(stack *st);
  * @param st -> The stack to use
  * @return The item on top of the stack withou removing it
  **/
-void *stack_peek(stack *st);
+void *stack_peek(EmeraldsStack *st);
 
 /**
  * @func: stack_free
  * @brief Frees the stack memory space
  * @param st -> The stack to free
  */
-void stack_free(stack *st);
+void stack_free(EmeraldsStack *st);
 
 #endif

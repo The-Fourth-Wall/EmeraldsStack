@@ -1,7 +1,7 @@
-#include "../export/Stack.h" /* IWYU pragma: keep */
+#include "../export/EmeraldsStack.h" /* IWYU pragma: keep */
 
 int main(void) {
-  stack *st = stack_new();
+  EmeraldsStack *st = stack_new();
 
   printf("TESTING STACK\n");
   stack_push(st, (void *)2);

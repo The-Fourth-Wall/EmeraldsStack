@@ -1,7 +1,7 @@
 #include "stack_base.h"
 
-stack *stack_new(void) {
-  stack *st = (stack *)malloc(sizeof(stack));
+EmeraldsStack *stack_new(void) {
+  EmeraldsStack *st = (EmeraldsStack *)malloc(sizeof(EmeraldsStack));
 
   /* Initial values */
   st->length = 0;
@@ -11,7 +11,7 @@ stack *stack_new(void) {
   return st;
 }
 
-size_t stack_length(stack *st) {
+size_t stack_length(EmeraldsStack *st) {
   if(st == NULL) {
     return 0;
   }
@@ -19,7 +19,7 @@ size_t stack_length(stack *st) {
   return st->length;
 }
 
-bool stack_is_empty(stack *st) {
+bool stack_is_empty(EmeraldsStack *st) {
   if(st == NULL) {
     return 0;
   }
@@ -27,7 +27,7 @@ bool stack_is_empty(stack *st) {
   return stack_length(st) == 0;
 }
 
-void stack_push(stack *st, void *item) {
+void stack_push(EmeraldsStack *st, void *item) {
   if(st == NULL) {
     return;
   }
@@ -39,7 +39,7 @@ void stack_push(stack *st, void *item) {
   vector_add(st->items, item);
 }
 
-void *stack_pop(stack *st) {
+void *stack_pop(EmeraldsStack *st) {
   if(st == NULL) {
     return NULL;
   }
@@ -51,7 +51,7 @@ void *stack_pop(stack *st) {
   return NULL;
 }
 
-void *stack_peek(stack *st) {
+void *stack_peek(EmeraldsStack *st) {
   if(st == NULL) {
     return NULL;
   }
@@ -62,7 +62,7 @@ void *stack_peek(stack *st) {
   return NULL;
 }
 
-void stack_free(stack *st) {
+void stack_free(EmeraldsStack *st) {
   vector_free(st->items);
   free(st);
 }

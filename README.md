@@ -1,4 +1,4 @@
-# Stack
+# EmeraldsStack
 
 A stack data structure implemented using a dynamic array.
 
@@ -10,14 +10,12 @@ A stack data structure implemented using a dynamic array.
 
 ## Usage
 
-`$ touch test.c`
-
 ```c
-#include "Stack.h"
+#include "EmeraldsStack.h"
 #include <stdio.h>
 
 int main(void) {
-  stack *st = stack_new();
+  EmeraldsStack *st = stack_new();
   stack_push(st, 2);
   stack_push(st, 3);
   stack_push(st, -1);
@@ -28,15 +26,13 @@ int main(void) {
 }
 ```
 
-`$ clang test.c Stack.so`
-
 ## Development
 
 - Write tests
 
 ## Contributing
 
-1. Fork it (<https://github.com/EmeraldsFramework/Stack/fork>)
+1. Fork it (<https://github.com/Oblivious-Oblivious/Emeralds/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -44,4 +40,4 @@ int main(void) {
 
 ## Contributors
 
-- [Oblivious](https://github.com/Oblivious-Oblivious) - creator and maintainer
+- [oblivious](https://github.com/Oblivious-Oblivious) - creator and maintainer
