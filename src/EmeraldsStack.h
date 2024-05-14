@@ -22,6 +22,4 @@
 
 #include "stack_base/stack_base.h"
 
-#include <stdio.h>
-
 #endif
